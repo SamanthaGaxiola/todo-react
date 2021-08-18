@@ -1,11 +1,14 @@
+import { useState } from "react";
 import TodoItem from "./TodoItem";
+import { getTodos } from "../utils";
 
 function TodoList() {
+  const [todos, setTodos] = useState(() => getTodos());
   return (
     <ul>
-      <TodoItem todo="item 1" />
-      <TodoItem todo="item 2" />
-      <TodoItem todo="item 3" />
+      {todos.map((todo) => (
+        <TodoItem key={todo} todo={todo} />
+      ))}
     </ul>
   );
 }
