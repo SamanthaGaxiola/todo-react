@@ -1,15 +1,11 @@
-import {TodoItem} from './components'
+import { TodoList } from "./components";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <ul>
-        <TodoItem todo="item 1" />
-        <TodoItem todo="item 2" />
-        <TodoItem todo="item 3" />
-      </ul>
+      <TodoList />
     </div>
   );
 }
