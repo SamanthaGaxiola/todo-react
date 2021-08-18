@@ -1,12 +1,20 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function TodoForm({ todos, setTodos }) {
   const [todo, setTodo] = useState("");
+
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        setTodos([todo, ...todos]);
+        setTodos([
+          {
+            id: uuidv4(),
+            todo,
+          },
+          ...todos,
+        ]);
         setTodo("");
       }}
     >
