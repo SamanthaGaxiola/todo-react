@@ -11,6 +11,7 @@ function TodoForm({ todos, addTodo }) {
         addTodo({
           id: uuidv4(),
           todo,
+          done: false,
         });
         setTodo("");
       }}

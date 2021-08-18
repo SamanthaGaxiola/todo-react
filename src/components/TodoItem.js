@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TodoItem.css";
 
 function TodoItemForm({ todo, hideForm, editTodo }) {
   const [updatedTodo, setUpdatedTodo] = useState(() => todo.todo);
@@ -31,7 +32,6 @@ function BtnDelete({ deleteTodo, id }) {
   return <button onClick={() => deleteTodo(id)}>Delete</button>;
 }
 
-
 function TodoItem({ todo, deleteTodo, editTodo }) {
   const [showForm, setShowForm] = useState(false);
 
@@ -42,14 +42,26 @@ function TodoItem({ todo, deleteTodo, editTodo }) {
     setShowForm((prev) => !prev);
   }
   return (
-    <li>
+    <li className={`TodoItem ${todo.done ? "complete" : ""}`}>
       {showForm ? (
         <TodoItemForm todo={todo} hideForm={hideForm} editTodo={editTodo} />
       ) : (
-        todo.todo
+        <div
+          className="todo"
+          onClick={() => {
+            editTodo({
+              ...todo,
+              done: !todo.done,
+            });
+          }}
+        >
+          {todo.todo}
+        </div>
       )}{" "}
-      <BtnEditCancel showForm={showForm} toggleForm={toggleForm} />
-      <BtnDelete deleteTodo={deleteTodo} id={todo.id} />
+      <div>
+        <BtnEditCancel showForm={showForm} toggleForm={toggleForm} />
+        <BtnDelete deleteTodo={deleteTodo} id={todo.id} />
+      </div>
     </li>
   );
 }

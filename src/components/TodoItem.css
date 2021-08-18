@@ -1,0 +1,13 @@
+.TodoItem {
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.TodoItem button + button {
+    margin-left: 0.5em;
+}
+
+.TodoItem.complete .todo{
+    text-decoration: line-through;
+}
