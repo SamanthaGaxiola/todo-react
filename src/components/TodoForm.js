@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import './TodoForm.css'
 
 function TodoForm({ todos, addTodo }) {
   const [todo, setTodo] = useState("");
 
   return (
     <form
+    className="TodoForm"
       onSubmit={(e) => {
         e.preventDefault();
         addTodo({
