@@ -1,0 +1,10 @@
+shows a list of todo items
+    extracted the static data to be returned by a function getData
+    refactored TodoList to use getData
+    move getData into a utils folder
+    create utils/index.js file
+    import getTodos in TodoList
+    modify getData to use a for loop
+
+add, remove, edit todo items
+mark todo items as done
