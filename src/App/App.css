@@ -1,0 +1,12 @@
+.App {
+  margin-left: 500px;
+  margin-top: 150px;
+  background-color: rgba(0, 139, 139, 0.311);
+  border: 1px 3px solid teal;
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

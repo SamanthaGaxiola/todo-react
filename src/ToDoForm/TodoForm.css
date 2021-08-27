@@ -1,0 +1,26 @@
+.TodoForm input {
+  background-color: antiquewhite;
+  border-color: teal;
+}
+
+.TodoItemForm input {
+  background-color: rgb(228, 139, 22);
+  border-color: teal;
+}
+.editbtn {
+  height: 30px;
+  width: 60px;
+  border: 1px solid rgb(80, 172, 86);
+  border-radius: 20px;
+  color: teal;
+  background-color: rgb(228, 223, 216);
+}
+
+.deletebtn {
+  height: 30px;
+  width: 60px;
+  border: 1px solid rgb(80, 172, 86);
+  border-radius: 20px;
+  color: teal;
+  background-color: rgb(228, 223, 216);
+}
